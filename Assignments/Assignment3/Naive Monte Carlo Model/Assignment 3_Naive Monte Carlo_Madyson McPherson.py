@@ -45,16 +45,14 @@ vol = 0.30
 div = 0.0
 T = 1.0
 N = 3
+
 callPrc = np.exp(-rate * T) * meanCall
 putPrc = np.exp(-rate * T) * meanPut
 
-#theCall = VanillaCallPayoff(K, T)
-#callPrice = NaiveMonteCarloPricer(theCall, spot, rate, div, vol, steps)
-#print("The price of the call is:" , callPrice)
+theCall = VanillaCallPayoff(K, T)
+callPrice = NaiveMonteCarloPricer(theCall, spot, rate, div, vol, steps)
+print("The price of the call is:" , callPrc)
 
-#thePut = VanillaPutPayoff(K,T)
-#putPrice = NaiveMonteCarloPricer(thePut, spot rate, div, vol, steps)
-#print("The price of the put is:" , putPrice)
-
-callPrc
-putPrc
+thePut = VanillaPutPayoff(K,T)
+putPrice = NaiveMonteCarloPricer(thePut, spot, rate, div, vol, steps)
+print("The price of the put is:" , putPrc)
